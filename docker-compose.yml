@@ -1,0 +1,7 @@
+version: "2"
+services:
+  shell:
+    image: eduardoshanahan/git_python:latest
+    container_name: es_git_python
+    entrypoint:
+      - /bin/sh
