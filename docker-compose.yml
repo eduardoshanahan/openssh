@@ -1,7 +1,9 @@
 version: "2"
 services:
   shell:
-    image: eduardoshanahan/git_python:latest
-    container_name: es_git_python
+    image: eduardoshanahan/openssh:latest
+    container_name: es_openssh
+    volumes:
+      - ./keys:/keys
     entrypoint:
       - /bin/sh
