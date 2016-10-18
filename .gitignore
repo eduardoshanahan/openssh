@@ -32,7 +32,7 @@ Temporary Items
 # Created by https://www.gitignore.io/api/docker
 
 # Keys generated
-./keys
+keys
 
 # Created by https://www.gitignore.io/api/linux
 
