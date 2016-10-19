@@ -7,4 +7,10 @@ services:
       - ./keys:/keys
     working_dir: /keys
     entrypoint:
-      - /bin/sh
+      - ssh-keygen
+
+  data-container:
+    image: eduardoshanahan/openssh:latest
+    container_name: openssh_data
+    volumes:
+      - ./keys:/keys
