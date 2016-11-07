@@ -23,7 +23,7 @@ ssh-keygen
 When asked where to save the key:
 
 ```bash
-./new_key
+./new_key_name
 ```
 
 Enter an empty passphrase if the key is going to be used to automate processes.
