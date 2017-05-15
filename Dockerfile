@@ -1,4 +1,4 @@
-FROM eduardoshanahan/alpine:3.5.0
+FROM eduardoshanahan/alpine:v3.5.0
 
 MAINTAINER Eduardo Shanahan <contact@eduardoshanahan.com>
 
