@@ -1,16 +1,14 @@
-version: "2"
+version: "3.4"
+
 services:
+
   shell:
     image: eduardoshanahan/openssh:latest
     container_name: es_openssh
     volumes:
-      - ./keys:/keys
-    working_dir: /keys
+      - type: bind
+        source: .
+        target: /root/.ssh/
     entrypoint:
       - /bin/sh
 
-  data-container:
-    image: eduardoshanahan/openssh:latest
-    container_name: openssh_data
-    volumes:
-      - ./keys:/keys

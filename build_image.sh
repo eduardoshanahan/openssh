@@ -1,0 +1,2 @@
+IMAGE_VERSION=$(cat version.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]')
+curl -H "Content-Type: application/json" --data '{"source_type": "Tag", "source_name":"'$IMAGE_VERSION'"}' -X POST https://registry.hub.docker.com/u/eduardoshanahan/openssh/trigger/8cf2656f-4f96-48a7-b64d-69870dad8dee/

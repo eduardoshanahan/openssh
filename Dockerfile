@@ -1,8 +1,7 @@
-FROM eduardoshanahan/alpine:v3.5.0
+FROM eduardoshanahan/alpine:3.6.0.3
 
-MAINTAINER Eduardo Shanahan <contact@eduardoshanahan.com>
+LABEL maintainer 'Eduardo Shanahan <contact@eduardoshanahan.com>'
 
-RUN apk update \
-&& apk add openssh
+RUN apk add openssh
 
 ENTRYPOINT ["/bin/sh"]
