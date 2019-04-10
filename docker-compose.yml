@@ -1,14 +1,30 @@
-version: "3.4"
+version: "3.7"
 
 services:
 
   shell:
     image: eduardoshanahan/openssh:latest
-    container_name: es_openssh
+    container_name: es_shell_openssh
+    stdin_open: true
+    tty: true
     volumes:
-      - type: bind
-        source: .
-        target: /root/.ssh/
+        - keys:/root/.ssh
+        - local:/local
     entrypoint:
       - /bin/sh
 
+volumes:
+
+  keys:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: $HOME/.ssh
+
+  local:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: $PWD
