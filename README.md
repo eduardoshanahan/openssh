@@ -3,19 +3,31 @@
 ## Building
 
 ```
-docker build . -t eduardoshanahan/node:latest
+docker build . -t eduardoshanahan/openssh:latest
 ```
 
 ## Running an interactive test
 
 ```
-docker run --rm -it eduardoshanahan/node:latest
+docker run --rm -it eduardoshanahan/openssh:latest
 ```
 
 Or with Docker Compose
 
 ```
 docker-compose run --rm shell
+```
+
+You can also run all from compose:
+
+```
+docker-compose up
+```
+
+and attach to the container:
+
+```
+docker attach es_shell_openssh
 ```
 
 ## Creating a key
@@ -33,6 +45,8 @@ When asked where to save the key:
 ```
 
 Enter an empty passphrase if the key is going to be used to automate processes.
+
+The keys will be kept in your workstation at ```~/.ssh```
 
 ## Building an image in Docker Hub
 
