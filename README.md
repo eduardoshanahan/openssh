@@ -6,6 +6,14 @@
 docker build . -t eduardoshanahan/openssh:latest
 ```
 
+The script
+
+```
+./build.sh
+```
+
+will do the same and create also a build with the version number contained in version.json.
+
 ## Running an interactive test
 
 ```
